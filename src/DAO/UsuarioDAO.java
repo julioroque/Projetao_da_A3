@@ -15,21 +15,20 @@ public class UsuarioDAO {
     
     public void CreateUser (UsuarioDTO usuario){
         try {
-            String sql = "insert into usuario (email,nome,senha) values ('?','?','?')";
+            String sql = "insert into usuario  (nome,email, senha) values (?,?,?)";
             
             conexao = new ConexaoDAO().conectaBD();
             
             PreparedStatement statement = conexao.prepareStatement(sql);
-            statement.setString(2,usuario.getEmail());
-            statement.setString(1,usuario.getNomeUsuario());
+            statement.setString(1,usuario.getEmail());
+            statement.setString(2,usuario.getNomeUsuario());
             statement.setString(3,usuario.getSenha());
             
             statement.execute();
             statement.close();
             
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null,"Não foi possivel cadastrar usuario");
-            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erro ao conectar com o banco" +ex);
         }
     
     }

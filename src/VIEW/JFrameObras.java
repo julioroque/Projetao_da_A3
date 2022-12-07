@@ -7,6 +7,8 @@ public class JFrameObras extends javax.swing.JFrame {
 
     public JFrameObras() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -31,7 +33,7 @@ public class JFrameObras extends javax.swing.JFrame {
 
         jButton1.setText("obras");
 
-        jButton2.setText("Planilhas");
+        jButton2.setText("Planilha");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -64,6 +66,12 @@ public class JFrameObras extends javax.swing.JFrame {
 
         jLabel5.setText("DATA DE INICIO:");
 
+        txtobra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtobraActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,7 +94,7 @@ public class JFrameObras extends javax.swing.JFrame {
                                 .addComponent(jLabel5))
                             .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap(55, Short.MAX_VALUE)
+                        .addContainerGap(59, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +137,7 @@ public class JFrameObras extends javax.swing.JFrame {
                         .addComponent(jButton5)
                         .addGap(18, 18, 18)
                         .addComponent(jButton6)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -148,20 +156,32 @@ public class JFrameObras extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        
+      //variaveis
         String nomeO = txtobra.getText();
         String dataI = txtinicio.getText();
         String dataT = txttermino.getText();
 
-        ObrasDTO sistemaCerto = new ObrasDTO(nomeO, dataI, dataT);
+        //metedo para inserir no banco de dados
+        ObrasDTO model = new ObrasDTO(nomeO, dataI, dataT);
 
         ObrasDAO repository = new ObrasDAO();
 
-        repository.CreateAobra(sistemaCerto);
-
+        repository.CreateAobra(model);
+        
+        //codigo para pular de janela + declarando o objeto
         JFramePlanilha jFramePlanilha_ = new JFramePlanilha();
         jFramePlanilha_.setVisible(true);
         this.dispose();
+        
+        //metedo para adicionar o valor recebido a outra Jframe que precisa do metedo declarado a cima.
+        jFramePlanilha_.exportarDados(model);
+    
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void txtobraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtobraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtobraActionPerformed
 
     public static void main(String args[]) {
 

@@ -16,40 +16,42 @@ public class PlanilhaDTO {
         this.total = total;
     }
 
-    public String getMaterial() {
-        return material;
+    public PlanilhaDTO() {
+       
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    
+    public String getMaterial() {
+        return material;
     }
 
     public String getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
-        this.quantidade = quantidade;
-    }
-
     public String getValorUnidade() {
         return valorUnidade;
-    }
-
-    public void setValorUnidade(String valorUnidade) {
-        this.valorUnidade = valorUnidade;
     }
 
     public String getTotal() {
         return total;
     }
 
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public void setQuantidade(String quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public void setValorUnidade(String valorUnidade) {
+        this.valorUnidade = valorUnidade;
+    }
+
     public void setTotal(String total) {
         this.total = total;
     }
-
-    
-    
     
     
 }
