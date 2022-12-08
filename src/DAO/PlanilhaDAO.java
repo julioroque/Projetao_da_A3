@@ -20,22 +20,24 @@ public class PlanilhaDAO {
     
   public void CreateAplanilha( PlanilhaDTO planilha_) {
         try {
-            String sql = " insert into planilha  (material,quantidade,valor_unidade,total) values (?,?,?,?);";
+            String sql = " insert into planilha  (id_planilha, material, quantidade, valor_unidade, total) values (?,?,?,?,?);";
 
             conexao = new ConexaoDAO().conectaBD();
 
             PreparedStatement statement = conexao.prepareStatement(sql);
-            statement.setString(1, planilha_.getMaterial());
-            statement.setString(2, planilha_.getQuantidade());
-            statement.setString(3, planilha_.getValorUnidade());
-            statement.setString(4, planilha_.getTotal());
+            
+            statement.setInt(1, planilha_.getId_material());
+            statement.setString(2, planilha_.getMaterial());
+            statement.setString(3, planilha_.getQuantidade());
+            statement.setString(4, planilha_.getValorUnidade());
+            statement.setString(5, planilha_.getTotal());
 
             statement.execute();
             statement.close();
 
+            System.out.println("materiais cadastrados!");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Não foi possivel cadastrar a obra");
-            Logger.getLogger(ObrasDAO.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Erro ao cadastrar materiais " + ex);
         }
     }
 
@@ -58,7 +60,9 @@ public class PlanilhaDAO {
             rs = statement.executeQuery(); 
             
             while(rs.next()) {
-            PlanilhaDTO objProdutoDTO = new PlanilhaDTO(sql,sql, sql, sql); 
+            PlanilhaDTO objProdutoDTO = new PlanilhaDTO();
+            
+            objProdutoDTO.setId_material(rs.getInt("id_planilha"));
             objProdutoDTO.setMaterial(rs.getString("material"));
             objProdutoDTO.setQuantidade(rs.getString("quantidade"));
             objProdutoDTO.setValorUnidade(rs.getString("valor_unidade"));
@@ -80,15 +84,16 @@ public class PlanilhaDAO {
      
       public void update(PlanilhaDTO objProdutoDTO) {
          try {
-            String sql = "UPDATE planilha  SET material =?, quantidade =?, valor_unidade =?, total =?, WHERE material =?" ;
+            String sql = "UPDATE planilha  SET material =?, quantidade =?, valor_unidade =?, total =? WHERE id_planilha =?" ;
             
             conexao = new ConexaoDAO().conectaBD();
             PreparedStatement statement = conexao.prepareStatement(sql);
             
-            statement.setString(1, objProdutoDTO.getMaterial());
-            statement.setString(2, objProdutoDTO.getQuantidade());
-            statement.setString(3,objProdutoDTO.getValorUnidade());
-            statement.setString(4, objProdutoDTO.getTotal());
+            statement.setInt(1, objProdutoDTO.getId_material());
+            statement.setString(2, objProdutoDTO.getMaterial());
+            statement.setString(3, objProdutoDTO.getQuantidade());
+            statement.setString(4,objProdutoDTO.getValorUnidade());
+            statement.setString(5, objProdutoDTO.getTotal());
            
             
             statement.execute(); 
@@ -96,25 +101,25 @@ public class PlanilhaDAO {
             
             System.out.println("Dado alterado com sucesso");
         } catch (SQLException ex) {
-            System.out.println("Erro ao alterar no Banco de dados " + ex);
+            System.out.println("Erro ao alterar material no Banco de dados " + ex);
         }
     }
       
       public void Delete(PlanilhaDTO ProdutoDTO_) {
           try {
-            String sql = "DELETE FROM planilha  WHERE material=?" ;
+            String sql = "DELETE FROM planilha  WHERE id_planilha=?" ;
             
             conexao = new ConexaoDAO().conectaBD();
             PreparedStatement statement = conexao.prepareStatement(sql);
           
-            statement.setString(1, ProdutoDTO_.getMaterial());
+            statement.setInt(1, ProdutoDTO_.getId_material());
             
             statement.execute(); 
             statement.close();
             
-            System.out.println("Produto excluido  com sucesso");
+            System.out.println("material excluido  com sucesso");
         } catch (SQLException ex) {
-            System.out.println("Erro ao excluir no Banco de dados " + ex);
+            System.out.println("Erro ao excluir o material no Banco de dados " + ex);
         }
     }
     

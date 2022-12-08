@@ -4,12 +4,14 @@ package DTO;
 
 public class PlanilhaDTO {
     
+    public int id_material;
     public String material;
     public String quantidade;
     public String valorUnidade;
     public String total;
 
-    public PlanilhaDTO(String material, String quantidade, String valorUnidade, String total) {
+    public PlanilhaDTO(int id_material, String material, String quantidade, String valorUnidade, String total) {
+        this.id_material = id_material;
         this.material = material;
         this.quantidade = quantidade;
         this.valorUnidade = valorUnidade;
@@ -20,7 +22,10 @@ public class PlanilhaDTO {
        
     }
 
-    
+    public int getId_material() {
+        return id_material;
+    }
+
     public String getMaterial() {
         return material;
     }
@@ -35,6 +40,10 @@ public class PlanilhaDTO {
 
     public String getTotal() {
         return total;
+    }
+
+    public void setId_material(int id_material) {
+        this.id_material = id_material;
     }
 
     public void setMaterial(String material) {
@@ -52,6 +61,7 @@ public class PlanilhaDTO {
     public void setTotal(String total) {
         this.total = total;
     }
+
     
     
 }

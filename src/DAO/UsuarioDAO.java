@@ -15,7 +15,7 @@ public class UsuarioDAO {
     
     public void CreateUser (UsuarioDTO usuario){
         try {
-            String sql = "insert into usuario  (nome,email, senha) values (?,?,?)";
+            String sql = "insert into usuario  (email, senha, nome) values (?,?,?)";
             
             conexao = new ConexaoDAO().conectaBD();
             
