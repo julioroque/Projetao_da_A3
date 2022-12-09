@@ -84,16 +84,16 @@ public class PlanilhaDAO {
      
       public void update(PlanilhaDTO objProdutoDTO) {
          try {
-            String sql = "UPDATE planilha  SET material =?, quantidade =?, valor_unidade =?, total =? WHERE id_planilha =?" ;
+            String sql = "UPDATE planilha  SET material=?, quantidade=?, valor_unidade=?, total=? WHERE id_planilha =?" ;
             
             conexao = new ConexaoDAO().conectaBD();
             PreparedStatement statement = conexao.prepareStatement(sql);
             
-            statement.setInt(1, objProdutoDTO.getId_material());
-            statement.setString(2, objProdutoDTO.getMaterial());
-            statement.setString(3, objProdutoDTO.getQuantidade());
-            statement.setString(4,objProdutoDTO.getValorUnidade());
-            statement.setString(5, objProdutoDTO.getTotal());
+            statement.setInt(5, objProdutoDTO.getId_material());
+            statement.setString(1, objProdutoDTO.getMaterial());
+            statement.setString(2, objProdutoDTO.getQuantidade());
+            statement.setString(3,objProdutoDTO.getValorUnidade());
+            statement.setString(4, objProdutoDTO.getTotal());
            
             
             statement.execute(); 

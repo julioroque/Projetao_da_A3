@@ -12,6 +12,10 @@ public class UsuarioDTO {
         this.nomeUsuario = nomeUsuario;
     }
 
+    public UsuarioDTO() {
+      
+    }
+
     public String getEmail() {
         return email;
     }

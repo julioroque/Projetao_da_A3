@@ -1,27 +1,28 @@
-
- 
 package VIEW;
 
+import DAO.UsuarioDAO;
+import DTO.UsuarioDTO;
 import java.awt.Color;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class JFrameLogin extends javax.swing.JFrame {
 
-    
     public JFrameLogin() {
         initComponents();
-        
+
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.BLACK);
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField2 = new javax.swing.JTextField();
+        txt_U_senha = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txt_U_email = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -44,9 +45,9 @@ public class JFrameLogin extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txt_U_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txt_U_emailActionPerformed(evt);
             }
         });
 
@@ -78,8 +79,8 @@ public class JFrameLogin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txt_U_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_U_email, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(169, 169, 169)
                         .addComponent(jLabel3))
@@ -99,11 +100,11 @@ public class JFrameLogin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_U_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_U_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addGap(53, 53, 53)
@@ -115,9 +116,35 @@ public class JFrameLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      JFrameObras jFrameObras_ = new JFrameObras();
+
+        try {
+
+            String email_ = txt_U_email.getText();
+            String senha = txt_U_senha.getText();
+
+            // colocar o usuario do tipo DTO
+            UsuarioDTO usuarioDTO = new UsuarioDTO();
+            usuarioDTO.setEmail(email_);
+            usuarioDTO.setSenha(senha);
+
+            //metodo que tem acesso ao banco de dados
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            ResultSet rs = usuarioDAO.autenticaUsuario(usuarioDTO);
+            if (rs.next()) {
+                System.out.println("Parabéns você consegiu acessar!!");
+                JFrameObras jFrameObras_ = new JFrameObras();
+                jFrameObras_.setVisible(true);
+                this.dispose();
+            } else {
+                System.out.println("Usuario não existe");
+            }
+        } catch (SQLException ex) {
+            System.out.println("deu erro");
+        }
+
+        /*JFrameObras jFrameObras_ = new JFrameObras();
       jFrameObras_.setVisible(true);
-      this.dispose();  
+      this.dispose();  */
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -125,13 +152,12 @@ public class JFrameLogin extends javax.swing.JFrame {
         JFrameCadastroUsuario.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txt_U_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_U_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txt_U_emailActionPerformed
 
-   
     public static void main(String args[]) {
-      
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFrameLogin().setVisible(true);
@@ -145,7 +171,7 @@ public class JFrameLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField txt_U_email;
+    private javax.swing.JTextField txt_U_senha;
     // End of variables declaration//GEN-END:variables
 }
