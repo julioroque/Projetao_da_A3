@@ -10,6 +10,9 @@ public class AnotacoesDTO {
         this.anotacoes = anotacoes;
     }
 
+    public AnotacoesDTO() {
+        
+    }
     public String getAnotacoes() {
         return anotacoes;
     }
