@@ -20,6 +20,14 @@ public class AnotacoesDTO {
     public void setAnotacoes(String anotacoes) {
         this.anotacoes = anotacoes;
     }
+
+    public void setiD_Anotacao(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public int getiD_Anotacao() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
 }
