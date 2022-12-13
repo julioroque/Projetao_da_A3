@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/camil/OneDrive/Área%20de%20Trabalho/Projetao_da_A3/src/VIEW/JFrameCadastroUsuario.java</file>
             <file>file:/C:/Users/camil/OneDrive/Área%20de%20Trabalho/Projetao_da_A3/src/DTO/ObrasDTO.java</file>
             <file>file:/C:/Users/camil/OneDrive/Área%20de%20Trabalho/Projetao_da_A3/src/DTO/UsuarioDTO.java</file>
@@ -10,6 +11,10 @@
             <file>file:/C:/Users/camil/OneDrive/Área%20de%20Trabalho/Projetao_da_A3/src/DTO/PlanilhaDTO.java</file>
             <file>file:/C:/Users/camil/OneDrive/Área%20de%20Trabalho/Projetao_da_A3/src/VIEW/JFrameLogin.java</file>
             <file>file:/C:/Users/camil/OneDrive/Área%20de%20Trabalho/Projetao_da_A3/src/VIEW/JFrameObras.java</file>
+=======
+            <file>file:/C:/Users/Mateus/Desktop/Projetao_da_A3/src/DAO/AnotacaoDAO.java</file>
+            <file>file:/C:/Users/Mateus/Desktop/Projetao_da_A3/src/DAO/ConexaoDAO.java</file>
+>>>>>>> 6753bd036da27b3b8cd0c370708686c1180e8a25
         </group>
     </open-files>
 </project-private>
