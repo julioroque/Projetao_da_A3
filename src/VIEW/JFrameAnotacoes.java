@@ -30,6 +30,7 @@ public class JFrameAnotacoes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setText("OBRAS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -37,6 +38,7 @@ public class JFrameAnotacoes extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
         jButton2.setText("Planilhas");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,6 +46,7 @@ public class JFrameAnotacoes extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 255));
         jButton3.setText("Anotações");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,8 +59,15 @@ public class JFrameAnotacoes extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(txt_An);
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 255));
         jButton5.setText("EDITE SUA ANOTAÇÃO");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 255));
         jButton4.setText("ADICIONAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +118,8 @@ public class JFrameAnotacoes extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        jButton5.getAccessibleContext().setAccessibleName("EDITAR ANOTAÇÕES");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -130,6 +142,10 @@ public class JFrameAnotacoes extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.Ad_ANOTACÃO();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     public static void main(String args[]) {
         

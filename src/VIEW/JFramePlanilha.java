@@ -7,6 +7,7 @@ import DTO.PlanilhaDTO;
 import DAO.PlanilhaDAO;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
 
 public class JFramePlanilha extends javax.swing.JFrame {
 
@@ -15,6 +16,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
         initComponents();
         
         setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.gray);
     }
 
     public void exportarDados (ObrasDTO model){
@@ -56,6 +58,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setText("OBRAS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +66,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
         jButton2.setText("Planilha");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +74,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 255));
         jButton3.setText("Anotações");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +82,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 255));
         jButton4.setText("EDITAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,11 +119,11 @@ public class JFramePlanilha extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TabelaProduto);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jLabel1.setText("nome da obra:");
+        jLabel1.setText("Nome da obra:");
 
-        jLabel3.setText("INICIO DA OBRA EM :");
+        jLabel3.setText("INICIO DA OBRA EM");
 
-        jLabel4.setText("Termino da obra :");
+        jLabel4.setText("TÉRMINO DA OBRA:");
 
         txtnomeObra.setEditable(false);
         txtnomeObra.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
@@ -139,6 +145,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
 
         jLabel7.setText("Total :");
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 255));
         jButton5.setText("CARREGAR");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +153,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
             }
         });
 
+        btnApagar.setBackground(new java.awt.Color(204, 204, 255));
         btnApagar.setText("APAGAR DADOS");
         btnApagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,7 +237,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnApagar)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -103,7 +103,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -167,6 +167,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="OBRAS"/>
       </Properties>
       <Events>
@@ -175,6 +178,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Planilha"/>
       </Properties>
       <Events>
@@ -183,6 +189,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Anota&#xe7;&#xf5;es"/>
       </Properties>
       <Events>
@@ -191,6 +200,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="EDITAR"/>
       </Properties>
       <Events>
@@ -256,17 +268,17 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="nome da obra:"/>
+        <Property name="text" type="java.lang.String" value="Nome da obra:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="INICIO DA OBRA EM :"/>
+        <Property name="text" type="java.lang.String" value="INICIO DA OBRA EM"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Termino da obra :"/>
+        <Property name="text" type="java.lang.String" value="T&#xc9;RMINO DA OBRA:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtnomeObra">
@@ -320,6 +332,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton5">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CARREGAR"/>
       </Properties>
       <Events>
@@ -328,6 +343,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnApagar">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="APAGAR DADOS"/>
       </Properties>
       <Events>
