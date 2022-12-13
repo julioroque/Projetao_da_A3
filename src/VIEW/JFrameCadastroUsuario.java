@@ -1,8 +1,5 @@
 package VIEW;
 
-
-
-
 import DTO.UsuarioDTO;
 import DAO.UsuarioDAO;
 import java.awt.Color;
