@@ -28,10 +28,12 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtnomecad = new javax.swing.JTextField();
         txtsenhacad = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 0));
+        setMinimumSize(new java.awt.Dimension(450, 450));
+        getContentPane().setLayout(null);
 
         txtemailcad.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtemailcad.addActionListener(new java.awt.event.ActionListener() {
@@ -39,6 +41,8 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
                 txtemailcadActionPerformed(evt);
             }
         });
+        getContentPane().add(txtemailcad);
+        txtemailcad.setBounds(50, 190, 257, 28);
 
         jButton2.setBackground(new java.awt.Color(204, 204, 255));
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
@@ -48,14 +52,18 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(220, 300, 72, 22);
 
         jLabel4.setBackground(new java.awt.Color(204, 204, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("CADASTRE-SE NA INOVA-CASA ");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(50, 20, 310, 40);
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("CADASTRA-SE");
+        jButton1.setText("CADASTRE-SE");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -66,21 +74,29 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(50, 300, 120, 22);
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("DIGITE SEU EMAIL");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(50, 150, 184, 22);
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("SENHA");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 220, 62, 22);
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("SEU NOME");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(50, 80, 103, 25);
 
         txtnomecad.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtnomecad.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +104,8 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
                 txtnomecadActionPerformed(evt);
             }
         });
+        getContentPane().add(txtnomecad);
+        txtnomecad.setBounds(50, 120, 257, 30);
 
         txtsenhacad.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtsenhacad.addActionListener(new java.awt.event.ActionListener() {
@@ -95,65 +113,15 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
                 txtsenhacadActionPerformed(evt);
             }
         });
+        getContentPane().add(txtsenhacad);
+        txtsenhacad.setBounds(50, 260, 257, 26);
 
-        jLabel6.setText("jLabel6");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(136, 136, 136))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtnomecad, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtemailcad, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtsenhacad, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(61, 61, 61)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))))
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(txtnomecad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(txtemailcad, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtsenhacad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jButton1)
-                .addGap(35, 35, 35)
-                .addComponent(jButton2)
-                .addContainerGap())
-            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\camil\\Downloads\\toolnation-4-900x600.jpg")); // NOI18N
+        jLabel5.setText("jLabel5");
+        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel5.setMinimumSize(new java.awt.Dimension(700, 600));
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 0, 540, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -221,7 +189,7 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtemailcad;
     private javax.swing.JTextField txtnomecad;
     private javax.swing.JTextField txtsenhacad;
