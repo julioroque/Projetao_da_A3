@@ -61,7 +61,7 @@
                       </Group>
                   </Group>
               </Group>
-              <Component id="jLabel6" min="-2" pref="351" max="-2" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,7 +70,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="txtnomecad" min="-2" pref="24" max="-2" attributes="0"/>
@@ -88,7 +88,6 @@
               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Component id="jLabel6" alignment="1" pref="454" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -198,14 +197,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtsenhacadActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\julio\OneDrive\Ambiente de Trabalho\IMG 2.jpg"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="jLabel6"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

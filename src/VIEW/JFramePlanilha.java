@@ -5,6 +5,7 @@ package VIEW;
 import DTO.ObrasDTO;
 import DTO.PlanilhaDTO;
 import DAO.PlanilhaDAO;
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -15,6 +16,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
         initComponents();
         
         setLocationRelativeTo(null);
+       getContentPane().setBackground(Color.DARK_GRAY);
     }
 
     public void exportarDados (ObrasDTO model){
@@ -113,11 +115,16 @@ public class JFramePlanilha extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TabelaProduto);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("nome da obra:");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("INICIO DA OBRA EM :");
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Termino da obra :");
 
         txtnomeObra.setEditable(false);
@@ -132,12 +139,20 @@ public class JFramePlanilha extends javax.swing.JFrame {
 
         txtdataT_.setEditable(false);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Material :");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Quantidade :");
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Valor por Unidade :");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Total :");
 
         jButton5.setText("CARREGAR");
@@ -160,9 +175,12 @@ public class JFramePlanilha extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ID :");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
         jLabel9.setText("PREENCHA TODOS OS CAMPOS");
 
         jButton6.setText("ATUALIZAR TABELA");
@@ -238,7 +256,7 @@ public class JFramePlanilha extends javax.swing.JFrame {
                             .addComponent(btnApagar)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton6))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,14 +399,10 @@ public class JFramePlanilha extends javax.swing.JFrame {
         String valor_unidade = txtValorU.getText();
         String total = txtTotal.getText();
         
-        
-        
-        
-        
-        
+       
         PlanilhaDTO objProdutoDTO_ = new PlanilhaDTO(id_Material, material, quantidade, valor_unidade, total);
         
-        PlanilhaDAO objProdutoDAO = new PlanilhaDAO(); 
+        PlanilhaDAO objProdutoDAO = new PlanilhaDAO();
         objProdutoDAO.CreateAplanilha(objProdutoDTO_);
        
         limpaCampos();
