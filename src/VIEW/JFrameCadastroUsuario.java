@@ -32,7 +32,7 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 0));
-        setMinimumSize(new java.awt.Dimension(450, 450));
+        setMinimumSize(new java.awt.Dimension(480, 440));
         getContentPane().setLayout(null);
 
         txtemailcad.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -116,9 +116,10 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
         getContentPane().add(txtsenhacad);
         txtsenhacad.setBounds(50, 260, 257, 26);
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENS/toolnation-4-900x600.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(370, 100, 120, 170);
+        jLabel6.setBounds(-110, 0, 590, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

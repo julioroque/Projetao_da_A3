@@ -44,6 +44,7 @@ public class JFrameLogin extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(153, 194, 82, 22);
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
         jButton2.setText("CADASTRA-SE");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,13 +77,13 @@ public class JFrameLogin extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(164, 126, 41, 16);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\camil\\Downloads\\OIP.jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENS/toolnation-4-900x600.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jLabel4.setMaximumSize(new java.awt.Dimension(600, 500));
         jLabel4.setMinimumSize(new java.awt.Dimension(500, 600));
         jLabel4.setPreferredSize(new java.awt.Dimension(515, 500));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(5, 7, 410, 260);
+        jLabel4.setBounds(-180, -20, 670, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
