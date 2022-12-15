@@ -28,7 +28,7 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtnomecad = new javax.swing.JTextField();
         txtsenhacad = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 0));
@@ -116,12 +116,9 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
         getContentPane().add(txtsenhacad);
         txtsenhacad.setBounds(50, 260, 257, 26);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\camil\\Downloads\\toolnation-4-900x600.jpg")); // NOI18N
-        jLabel5.setText("jLabel5");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel5.setMinimumSize(new java.awt.Dimension(700, 600));
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 540, 410);
+        jLabel6.setText("jLabel6");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(370, 100, 120, 170);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -189,7 +186,7 @@ public class JFrameCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtemailcad;
     private javax.swing.JTextField txtnomecad;
     private javax.swing.JTextField txtsenhacad;

@@ -30,6 +30,9 @@ public class JFrameLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(500, 400));
+        getContentPane().setLayout(null);
+        getContentPane().add(txt_U_senha);
+        txt_U_senha.setBounds(65, 160, 257, 22);
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setText("ENTRAR");
@@ -38,6 +41,8 @@ public class JFrameLogin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(153, 194, 82, 22);
 
         jButton2.setText("CADASTRA-SE");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -45,76 +50,39 @@ public class JFrameLogin extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(254, 234, 117, 22);
 
         txt_U_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_U_emailActionPerformed(evt);
             }
         });
+        getContentPane().add(txt_U_email);
+        txt_U_email.setBounds(65, 86, 257, 22);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("LOGIN");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(163, 21, 52, 25);
 
         jLabel2.setBackground(new java.awt.Color(255, 102, 102));
         jLabel2.setText("EMAIL:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(171, 64, 37, 16);
 
         jLabel3.setBackground(new java.awt.Color(255, 102, 102));
         jLabel3.setText("SENHA:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(164, 126, 41, 16);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\camil\\Downloads\\OIP.jpg")); // NOI18N
         jLabel4.setText("jLabel4");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(txt_U_email, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(51, 51, 51)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txt_U_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addComponent(jLabel3)))
-                .addGap(80, 80, 80))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(6, 6, 6)
-                .addComponent(txt_U_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(txt_U_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap())
-        );
+        jLabel4.setMaximumSize(new java.awt.Dimension(600, 500));
+        jLabel4.setMinimumSize(new java.awt.Dimension(500, 600));
+        jLabel4.setPreferredSize(new java.awt.Dimension(515, 500));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(5, 7, 410, 260);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
