@@ -15,9 +15,8 @@ public class ConexaoDAO {
         try {
             String url =  "jdbc:mysql://localhost:3306/projeto?serverTimezone=UTC";
                   String usuario = "root";
-
-                  String senha = "123456";
-
+                  String senha = "070702";
+                  
             conexao = DriverManager.getConnection(url, usuario, senha);
             
            

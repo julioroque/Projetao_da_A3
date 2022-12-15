@@ -15,16 +15,16 @@ public class AnotacaoDAO {
        ResultSet rs;
        ArrayList<AnotacoesDTO> lista2 = new ArrayList<>();
     
-  public void CreateAplanilha( AnotacoesDTO Anotacao_) {
+  public void CreateAnotacao( AnotacoesDTO Anotacao_) {
         try {
-            String sql = " insert into anotacoes  (anotacao) values (?)";
+            String sql = "insert into anotacoes  (id_anotacoes, anotacao) values (?,?);";
 
             conexao = new ConexaoDAO().conectaBD();
 
             PreparedStatement statement = conexao.prepareStatement(sql);
             
-            
-            statement.setString(1, Anotacao_.getAnotacoes());
+            statement.setInt(1, Anotacao_.getiD_Anotacao());
+            statement.setString(2, Anotacao_.getAnotacoes());
             
 
             statement.execute();
@@ -37,34 +37,6 @@ public class AnotacaoDAO {
     
   }
 
-public ArrayList<AnotacoesDTO> readAllplanilha_(){
-        try {
-            String sql = "SELECT * FROM planilha";
-            
-            conexao = new ConexaoDAO().conectaBD();
-            PreparedStatement statement = conexao.prepareStatement(sql);
-            rs = statement.executeQuery(); 
-            
-            while(rs.next()) {
-            AnotacoesDTO objAnotacaoDTO = new AnotacoesDTO();
-                       
-            objAnotacaoDTO.setAnotacoes(rs.getString("total"));
-           
-            
-            lista2.add(objAnotacaoDTO);
-            } 
-           
-            statement.close(); 
-            
-            return lista2;
-            
-        } catch (SQLException ex) {
-            System.out.println("Erro ao inserir na lista " + ex);
-            return null;
-        }
-}
-
-
 public ArrayList<AnotacoesDTO> readAllAnotacao_(){
         try {
             String sql = "SELECT * FROM anotacoes";
@@ -76,7 +48,7 @@ public ArrayList<AnotacoesDTO> readAllAnotacao_(){
             while(rs.next()) {
             AnotacoesDTO objAnotacaoDTO = new AnotacoesDTO();
                        
-            objAnotacaoDTO.setiD_Anotacao(rs.getInt("id_anotacoes"));
+             objAnotacaoDTO.setiD_Anotacao(rs.getInt("id_anotacoes"));
             objAnotacaoDTO.setAnotacoes(rs.getString("anotacao"));
            
             
@@ -112,4 +84,23 @@ public void update(AnotacoesDTO objAnotacaoDTO) {
             System.out.println("Erro ao alterar anotacao no Banco de dados " + ex);
         }
     }
+
+public void Delete(AnotacoesDTO anotacoesDTO_) {
+          try {
+            String sql = "DELETE FROM anotacoes  WHERE id_anotacoes =?" ;
+            
+            conexao = new ConexaoDAO().conectaBD();
+            PreparedStatement statement = conexao.prepareStatement(sql);
+          
+            statement.setInt(1, anotacoesDTO_.getiD_Anotacao());
+            
+            statement.execute(); 
+            statement.close();
+            
+            System.out.println("material excluido  com sucesso");
+        } catch (SQLException ex) {
+            System.out.println("Erro ao excluir anotacao no Banco de dados " + ex);
+        }
+    }
 }
+
